@@ -1,0 +1,17 @@
+version: '3.7'
+services:
+  swagger-editor:
+     image: swaggerapi/swagger-editor
+     container_name: swagger-editor
+     ports:
+       - 82:8080
+  swagger-vue:
+     build: 
+       context: ./
+       dockerfile: Dockerfile
+     image: swagger-vue
+     container_name: swagger-vue
+     ports:
+       - 81:8080
+     environment: 
+       - CHOKIDAR_USEPOLLING=true
