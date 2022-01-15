@@ -11,6 +11,9 @@ services:
        dockerfile: Dockerfile
      image: swagger-vue
      container_name: swagger-vue
+     volumes:
+      - .:/swagger/swagger-vue
+      - /swagger/swagger-vue/node_modules
      ports:
        - 81:8080
      environment: 
