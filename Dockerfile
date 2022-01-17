@@ -1,8 +1,6 @@
 FROM node:12.22
 
-ENV CONTAINER_PATH /swagger
-
-WORKDIR $CONTAINER_PATH
+WORKDIR /swagger
 
 COPY package*.json ./
 
